@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int X, Y, Z;
+  
+  cout << "Number1: ";
+  cin >> X;
+  
+  cout << "Number2: ";
+  cin >> Y;
+  
+  cout << "Number3: ";
+  cin >> Z;
+  
+  cout << (X * Y) / Z;
+  
+  return 0;
+  }
