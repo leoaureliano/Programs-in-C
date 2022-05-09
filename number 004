@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int number1, number2, divisor;
+  
+  cout << "Select number 1: ";
+  cin >> number1;
+  
+  cout << "number2 = " ;
+  cin >> number2;
+  
+  cout << "Select the divisor: ";
+  cin >> divisor;
+  
+  cout << (number1 + number2) / divisor;
+  
+  return 0;
+  }
+  
