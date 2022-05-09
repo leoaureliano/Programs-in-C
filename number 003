@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+  int X = 10;
+  int Y;
+  cout << "Into with a value";
+  cin >> Y;
+  
+  cout << "Values: " << X + Y;
+  return 0;
+  }
