@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+int main() {
+    
+double Discount;
+float DiscountPrice, RealPrice, StudentPrice;
+
+cout << "Put the values for each item and discont/n";
+cout << "Full value of laptop1: ";
+
+cin >> RealPrice;
+
+cout << "Discount  percentage for it: ";
+
+cin >> Discount ;
+
+cout << "Student price of laptop1: ";
+
+cin >> StudentPrice;
+
+if(Discount > 1.01){
+    DiscountPrice = RealPrice - (RealPrice * Discount / 100);
+}
+
+else{
+    DiscountPrice = RealPrice * Discount ;
+}
+
+cout <<"The value with a discout is: " << DiscountPrice;
+
+}
