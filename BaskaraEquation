@@ -1,0 +1,54 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main() {
+    int a, b, c, d, x1, x2;
+
+    cout << "Select A in the equation: ";
+    cin >> a;
+
+    cout << "Select B in the equation: ";
+    cin >> b;
+
+    cout << "Select C in the equation: ";
+    cin >> c;
+
+    if (a == 0) {
+        cout << " Display not quadratic \n";
+
+        if (b == 0) {
+            cout << "a = 0 \n";
+            cout << "b = 0 \n";
+            cout << "bye \n";
+        }
+
+        else {
+            x1 = -c / b;
+            cout << "x1 = " << x1;
+            cout << "End";
+        }
+    }
+
+    else {
+        (d = (b * b) - 4 * a * c);
+
+        if (d < 0) {
+            cout << "Display no real answer. Fail to take the square root of Negative value. \n";
+        }
+        else {
+            cout << a << b << c << endl;
+            cout << d << endl;
+            x1 = (-1 * b + sqrt(d)) / (2 * a);
+            cout << "x1 = " << x1 << "\n";
+
+            x2 = (-1 * b - sqrt(d)) / (2 * a);
+            cout << "x2 = " << x2 << "\n";
+        }
+
+    }
+
+    cout << "End";
+    return 0;
+}
