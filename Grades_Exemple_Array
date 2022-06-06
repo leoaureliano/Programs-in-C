@@ -1,0 +1,45 @@
+/this file have a mistake
+#include <iostream>
+
+using namespace std;
+
+void f1(int &a) {
+    a = a + 1; //11
+}
+int main()
+{
+    int grades[100];
+    const int x = 6;
+    grades[x] = 66;
+    grades[0] = 99;
+    grades[1] = 80;
+    grades[2] = 90;
+    grades[3] = 74;
+    grades[4] = 80;
+    grades[5] = 98;
+    //...
+    grades[5] = 87;
+    int min = 3213122123;// or INT_MIN
+    int max = -312341241;// INT_MAX
+    int sum = 0;
+    int b = 99;
+    
+    for (int i = 0; i < 6; i++) {
+        sum += grades[i];
+    }
+
+    cout << sum;
+
+    for (int i = 0; i < 6; i++){
+        sum += grades[i];
+        if (grades[i] > max)
+            max = grades[i];
+            
+        if (grades[i] > min)
+            min = grades[i];
+    }
+
+    cout << max; "\n";
+    cout << min;
+    return 0;
+}
