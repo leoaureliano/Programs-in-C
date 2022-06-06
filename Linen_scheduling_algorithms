@@ -1,0 +1,28 @@
+//Linen scheduling algorithms
+#include <iostream>
+
+using namespace std;
+
+int arr[9];
+
+void lookup(int arr[] , int size_) {
+	//stub.fuction!
+	for (int i = 0; i < 2; i++) {
+
+
+	}
+	;
+}
+
+int main()
+{
+	int arr[9] = { 20, 23, 15, 11, 8, 14, -1, 30 };
+	const int ARR_SIZE = 8;
+	int arr[ARR_SIZE] = { 20, 23, 15, 11, 8, 14, -1, 30 };
+	int target = 11;
+	cout << lookup(arr, ARR_SIZE);
+	
+		
+
+
+}
