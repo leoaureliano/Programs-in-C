@@ -4,11 +4,15 @@
 using namespace std;
 
 int main(){
-    char x[10] = "hi Mom!";
+    char x[10] = "Hi Mom!";
     // x[0] = H
     // x[3] = M
     // x[5] = m
     cout << x[3];
+    
+    //you can use strncpy to count the digits
+    //you can use strcat to plug two strings such as strcat(x, "good morning.") //Hi Mom! good morning
+    
     
     return 0;
 }
