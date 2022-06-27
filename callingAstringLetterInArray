@@ -1,0 +1,11 @@
+//  Created by Leonardo Aureliano on 2022-06-27.
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    char x[10] = "hi Mom!";
+    cout << x[3];
+    
+    return 0;
+}
