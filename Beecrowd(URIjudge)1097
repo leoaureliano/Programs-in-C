@@ -1,0 +1,33 @@
+//  Beecrowd(URIjudge)1097
+//
+//  Created by Leonardo Aureliano on 2022-06-27.
+//
+
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() {
+    
+    int I = -1;
+    int J = 5;
+    
+    for(int i = 0; i <= 4; i++){
+        
+        I= I + 2;
+        J= J + 2;
+        
+        for(int cont = 0; cont <= 2; cont++){
+            
+            cout << "I=" << I;
+            cout << " ";
+            cout << "J=" << J--;
+            cout << endl;
+            
+        }
+        J= J +3;
+        
+    }
+        
+    return 0;
+}
