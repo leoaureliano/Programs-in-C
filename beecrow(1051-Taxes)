@@ -1,0 +1,55 @@
+// Presentation error
+//  beecrowd(1051)
+//
+//  Created by Leonardo Aureliano on 2022-06-28.
+
+#include <iomanip>
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() {
+    
+    float salary;
+    float tax = 0.00;
+    float taxes;
+    float tax2 = 8;
+    float tax3 = 18;
+    float tax4 = 28;
+    
+    cin >> salary;
+    cout << fixed << setprecision(2);
+
+    
+    if(salary < 2000.00){
+        cout << "Isento";
+    }
+    
+    else if(salary >= 2000.01 & salary <= 3000.00){
+        salary = salary - 2000;
+        tax = salary * (tax2 /100);
+        cout << "R$ ";
+        cout << tax;
+    }
+    
+    else if(salary >= 3000.01 & salary <= 4500.00){
+        salary = salary - 3000;
+        tax2 = (tax2 /100) * 1000;
+        taxes = salary * (tax3 /100);
+        tax = taxes + tax2;
+        cout << "R$ ";
+        cout << tax;
+    }
+    
+    else if(salary > 4500){
+        salary = salary - 4500;
+        tax2 = (tax2 /100) * 1000;
+        tax3 = 1500 * (tax3 /100);
+        taxes = salary * (tax4 / 100);
+        tax = taxes + tax2 + tax3;
+        cout << "R$ ";
+        cout << tax;
+    }
+    
+    return 0;
+}
