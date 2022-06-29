@@ -1,0 +1,23 @@
+//  Created by Leonardo Aureliano on 2022-06-28.
+
+#include <iostream>
+ 
+using namespace std;
+ 
+int main(){
+    int x;
+    int n = 1;
+    cin >> x;
+    
+    if(x % 2 == 0){
+        x--;
+    }
+    
+    for(int i = 1; i <= x;){
+        cout << n << endl;
+        n = n + 2;
+        x = x - 2;
+    }
+    
+    return 0;
+}
