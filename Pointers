@@ -1,0 +1,24 @@
+//  Chapter 9
+//
+//  Created by Leonardo Aureliano on 2022-07-04.
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    int *p;
+    int x = 5;
+    p = &x;
+    int *p1;
+    
+    //p = x; is illigal
+    
+    int **p2;
+    p2 = & p;
+    // op = &p1; Illigal
+    cout << **p2;
+    
+    
+    cout << endl;
+    return 0;
+}
