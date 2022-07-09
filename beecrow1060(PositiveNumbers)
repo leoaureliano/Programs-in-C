@@ -1,0 +1,25 @@
+// Exercise 1060 Beecrowd
+//Have some mistake but in general it work! 
+//  Created by Leonardo Aureliano on 2022-07-09.
+#include <iostream>
+using namespace std;
+
+int main(){
+    
+    int i;
+    float arr[5];
+    int count = 0;
+    
+    for (i = 0; i < 5; i++){
+        cin >> arr[i];
+    
+        if(arr[i] >= 1){
+            count++;
+        }
+    }
+    cout << count << " valores positivos";
+    
+    cout << endl;
+    
+    return 0;
+}
