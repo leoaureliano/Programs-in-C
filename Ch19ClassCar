@@ -1,0 +1,55 @@
+//  main.cpp
+//  Class
+//
+//  Created by Leonardo Aureliano on 2022-07-11.
+#include <iostream>
+using namespace std;
+
+
+class Car//it started being private and can turn public or potected too
+// If call as a struct Car will "be public" at start
+{
+public: //acessor [private/public/project]
+    int year;
+    string model;
+    string make;
+    
+};
+
+void f1(Car a){
+    cout << a.make;
+    // You can call a fuction like this to
+}
+
+int main(){
+    
+    Car x;
+    x.make = "Ford";
+    x.year = 2012;
+    x.model = "Explorer";
+    
+    Car y;
+    y.make = "Honda";
+    y.year = 2015;
+    y.model = "Civic";
+    
+    //x = y; You can do that ir order to change the value of X
+    
+
+    Car arr[2];
+    // Creating a array is possible too like a simple code.
+    arr[0].make = "BMW";
+    arr[1].make = "Toyota";
+    
+    //f1(arr[0]); //fuction call -> BMW
+    
+    
+    //Creating a pointer.
+    Car *p1;
+    p1 = &y;
+    (*p1).make = 2016;
+    cout << y.make; //2016
+    
+    
+    return 0;
+}
