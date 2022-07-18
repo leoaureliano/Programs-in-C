@@ -1,0 +1,37 @@
+//
+//  main.cpp
+//  18july
+//
+//  Created by Leonardo Aureliano on 2022-07-18.
+#include <iostream>
+using namespace std;
+
+class Rect{
+    friend double area(Rect x);
+    int width;
+    int height;
+    //public
+    public:
+    Rect(int a, int b){
+        width = a; height = a;
+    }
+// if isn`t friend you need to state this fuctions.
+//    int get_width(){
+//        return width;
+//    }
+//    int get_height(){
+//        return height;
+//    }
+};
+
+double area(Rect x){
+    return x.width * x.height;
+}
+
+
+int main() {
+    Rect a_rectangle(2, 4);
+    cout << area(a_rectangle); //8
+   
+    return 0;
+}
