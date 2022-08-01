@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+const int SIZE = 5;
+
+void f1(int arr[])
+{
+    for (int i = 0; i < SIZE; i++)
+    {
+        cout << arr[i];
+    }
+}
+
+void f2(int arr[], int current_index)
+{
+    if (current_index > SIZE - 1)
+        return;
+    else{
+        cout << arr[current_index];
+        f2(arr, ++current_index);
+    }
+        
+}
+int main()
+{
+    int arr[5] = {1, 2, 3, 4, 5};
+
+    f1(arr); // 1, 2, 3, 4, 5
+    cout << endl;
+    f2(arr, 0); // 1, 2, 3, 4, 5
+    return -1;
+}
