@@ -1,0 +1,49 @@
+//  main.cpp
+//  Pratice Q1
+//
+//  Created by Leonardo Aureliano on 2022-08-08.
+
+#include <iostream>
+using namespace std;
+
+int migratoryBirds(int arr[], int arrSize) {
+    int *frequency = new int [arrSize];
+
+
+for( int i = 0; i < arrSize; i++) {
+    frequency [i] = 0;
+}
+
+for( int i = 0; i < arrSize; i++) {
+    frequency [arr[i]]++;
+}
+
+int max = INT_MIN;
+int max_pos = 0;
+for( int i = 0; i < arrSize; i++){
+    if(frequency[i] > max){
+        max = frequency[i];
+        max_pos = i;
+    }
+}
+delete [] frequency;
+return max_pos;
+}
+
+int main() {
+
+    int size;
+    cout << "PlZ enter the array size: \n";
+    cin >> size;
+    
+    int *arr = new int [size];
+    for(int i = 0; i < size; i++){
+        cout << "Plz, enter the " << (i + 1) << " element.\n";
+        cin >> arr[i];
+    }
+    
+    cout << "The Anwer is: " << migratoryBirds(arr, size);
+    delete []arr;
+
+    return 0;
+}
