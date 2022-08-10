@@ -1,0 +1,44 @@
+//  Adder
+//  Created by Leonardo Aureliano on 2022-08-10.
+
+#include <iostream>
+using namespace std;
+
+class Adder{
+private:
+    int sum_;
+    
+public:
+    
+    Adder() {sum_ = 0;}
+    Adder(int n) {sum_ = n;}
+    void operator+= (int n) {sum_ += n;}
+    friend bool operator== (const Adder &x, const Adder &y);
+    friend ostream &operator<<(ostream &ostr, const Adder &x);
+    
+};
+bool operator==(const Adder &x, const Adder &y)
+{
+    return (x.sum_ == y.sum_);
+}
+
+ostream &operator<<(ostream &ostr, const Adder &x)
+{
+    return ostr << x.sum_;
+}
+int main() {
+    Adder sum1;
+    Adder sum2(2);
+    
+    cout << "sum1 is " << sum1 << '\n';
+    cout << "sum2 is " << sum2 << '\n';
+    
+    sum1 += 5;
+    sum2 += 3;
+    
+    if (sum1 == sum2)
+        cout << "sum1 and sum2 are the same \n";
+    
+    
+    return 0;
+}
