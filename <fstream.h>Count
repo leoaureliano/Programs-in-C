@@ -1,0 +1,31 @@
+//  main.cpp
+//  FileManageCount
+//
+//  Created by Leonardo Aureliano on 2022-08-10.
+
+#include <iostream>
+#include <fstream.h>
+using namespace std;
+
+int main() {
+
+    ifstream fin("story.txt");
+    if (fin.fail()){
+        cout << "Error opening file \n";
+        exit(1);
+    }
+    int e_count = 0;
+    char next;
+    
+    fin.get(next);
+    while (!fin.eof())
+    {
+        if (next == 'e')
+            e_count++;
+        fin.get(next);
+    }
+    cout << "e_count = " << e_count << "\n";
+    
+    
+    return 0;
+}
