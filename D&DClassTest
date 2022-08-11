@@ -1,0 +1,87 @@
+//
+//  main.cpp
+//  &Dungeon
+//
+//  Created by Leonardo Aureliano on 2022-08-11.
+
+#include <iostream>
+using namespace std;
+
+class Character{
+    
+private:
+    string Name;
+    string Class;
+    string Subclass;
+    int Proficiency = 2;
+    
+public:
+    Character(string Name,string Class, string Subclass){
+        this->Name = Name;
+        this->Class = Class;
+        this->Subclass = Subclass;
+    }
+    
+    void addLevel( int Level){
+        cin >> Level;
+        cout <<  "Level: " << Level;
+        
+    }
+    
+    void getProficiency(int Level){
+        if(Level > 3){
+            Proficiency = 2;
+        }
+        if(Level <= 3 & Level > 8){
+            Proficiency = 3;
+        }
+        if(Level <= 9 & Level >13){
+            Proficiency = 4;
+        }
+    }
+    
+    string getName(){
+        return Name;
+    }
+    string getClass(){
+        return Class;
+    }
+    string getSubclass(){
+        return Subclass;
+    }
+    
+    int getProficiency(){
+        return Proficiency;
+    }
+    
+        
+    
+};
+
+int main() {
+    
+    Character Nicolo("Nicolo", "Bard", "Marsks");
+    cout << Nicolo.getName() << endl;
+    cout << Nicolo.getClass() << endl;
+    cout << Nicolo.getSubclass() << endl;
+    Nicolo.addLevel(4);
+    cout << endl;
+    cout << Nicolo.getProficiency() << endl;
+    
+    cout << endl;
+    
+    Character Montezuma("Montezuma", "Druid", "Moon Circle");
+    cout << Montezuma.getName() << endl;
+    cout << Montezuma.getClass() << endl;
+    cout << Montezuma.getSubclass() << endl;
+    cout << endl << "\n";
+    
+    Character Romanova("Romanova", "Wizard", "Sword");
+    cout << Montezuma.getName() << endl;
+    cout << Montezuma.getClass() << endl;
+    cout << Montezuma.getSubclass() << endl;
+    
+    cout << endl;
+    
+    return 0;
+}
