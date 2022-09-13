@@ -1,0 +1,115 @@
+//  Lab1 - P2
+//  Created by Leonardo Aureliano on 2022-09-11.
+
+#include <iostream>
+using namespace std;
+
+int CLASS_SIZE = 5;
+
+struct StudentRecord{
+public:
+    int StudentNumber;
+    double Scores;
+    double grade;
+    char letter = 'A';
+    double test1;
+    double test2;
+    double midterm;
+    double finalt;
+    
+void input(StudentRecord)
+{
+    cout << "Enter the student number:";
+    cout << endl;
+    cin >> StudentNumber;
+    cout << endl;
+    
+    cout << "enter two 10-point quizzes:";
+    cout << endl;
+    cin >> test1;
+    cin >> test2;
+    cout << endl;
+    
+    if (test1 > 10 || test2 > 10) {
+        cout << " Value should be less than 10!";
+        cout << endl;
+        cout << "enter two 10-point quizzes:";
+        cout << endl;
+        cin >> test1;
+        cin >> test2;
+        cout << endl;
+    }
+    
+    cout << "enter the midterm and final exam grades. These are 100-point tests:";
+    cout << endl;
+    cin >> midterm;
+    cin >> finalt;
+    
+    if (test1 > 100 || test2 > 100) {
+        cout << " Value should be less than 100!";
+        cout << endl;
+        cout << "enter two 10-point quizzes:";
+        cout << endl;
+        cin >> midterm;
+        cin >> finalt;
+        cout << endl;
+    }
+    
+    cout << endl;
+    
+    return;
+}
+
+    
+    void ComputeGrade(){
+        grade = ((test1 + test2) * 25) / 20 + midterm / 4 + finalt / 2;
+        
+        if (grade <= 59) {
+            letter = 'F';
+        }
+        else if (grade <= 60 & grade > 70){
+            letter = 'D';
+        }
+        else if (grade <= 70 & grade > 80){
+            letter = 'C';
+        }
+        else if (grade <= 80 & grade > 90){
+            letter = 'B';
+        }
+        else if (grade <= 90 & grade >= 100){
+            letter = 'A';
+        }
+    
+    }
+
+    
+    void output(){
+        cout << "The record for student number: ";
+        cout << StudentNumber;
+        cout << endl;
+        cout << "The quiz grades are: " << test1 << " " << test2;
+        cout << endl;
+        cout << "The midterm and exam grades are: " << midterm << " " << finalt;
+        cout << endl;
+        cout << "The overall average is: " << grade;
+        cout << endl;
+        cout << "The letter grade assigned is: " << letter;
+        cout << endl;
+    }
+
+    
+};
+
+int main()
+{
+ StudentRecord student[CLASS_SIZE];
+ for (int i = 0; i < CLASS_SIZE; i++)
+ student[i].input(StudentRecord());
+ for (int i = 0; i < CLASS_SIZE; i++)
+ {
+ student[i].ComputeGrade();
+ student[i].output();
+ cout << endl;
+ }
+ return 0;
+}
