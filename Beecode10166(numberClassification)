@@ -1,0 +1,44 @@
+//
+//  main.cpp
+//  Beecode10166
+//
+//  Created by Leonardo Aureliano on 2022-10-12.
+//
+
+#include <iostream>
+
+using namespace std;
+
+int positive;
+int negative;
+int even;
+int odd;
+
+int main() {
+    
+    int n;
+    
+    for (int i = 0; i < 5; i++){
+        
+        cin >> n;
+        
+        if (n > 0 ){
+            positive++;
+        }
+        if (n < 0) {
+            negative++;
+        }
+        
+        if (n % 2 == 0){
+            even++;
+        }
+        else{
+            odd++;
+        }
+        
+    }
+    cout << even <<" valor(es) par(es)" << endl;
+    cout << odd << " valor(es) impar(es)" << endl;
+    cout << positive << " valor(es) positivo(s)" << endl;
+    cout << negative << " valor(es) negativo(s)" << endl;
+}
