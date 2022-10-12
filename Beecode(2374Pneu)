@@ -1,0 +1,27 @@
+//
+//  main.cpp
+//  Bee 2374
+//
+//  Created by Leonardo Aureliano on 2022-10-12.
+//
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int n;
+    int m;
+    int re;
+    
+    cin >> n;
+    cin >> m;
+    
+    if (m >= 1 && m <= 40){
+        if(n >= 1 && n <= 40){
+            re = n - m;
+            cout << re << endl;
+            
+        }
+    }
+}
