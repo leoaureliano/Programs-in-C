@@ -1,3 +1,4 @@
+//
 //  main.cpp
 //  Bee1144
 //
@@ -9,17 +10,11 @@ using namespace std;
 
 int main() {
     int n; //number of sides of a polygon
-    int lines;
-    
     
     cin >> n;
-    
-    if(n >= 3 && n <= 10**9){
-        if( n == 4){
-            lines = 2;
-        }
-        else {
-        lines = (n -2);
+    if (n >= 3){
+        n = n - 2;
+        
+        
     }
-        cout << lines;
 }
