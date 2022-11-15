@@ -1,0 +1,23 @@
+// Example program including map
+#include <iostream>
+#include <string>
+#include <map>
+
+using namespace std;
+
+int main()
+{
+    map<int, string > studants =
+    {
+    {101, "Jakob"}, {102, "Diego"},
+    {103, "Jhon"}
+    };
+    
+    for (auto element : studants)
+    {
+    cout << "Number " << element.first << "\tName: "
+    << element.second << endl;
+    }
+    
+return 0;
+}
