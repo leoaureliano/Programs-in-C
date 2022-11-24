@@ -1,34 +1,27 @@
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
 
-using namespace std;
+#include <QMainWindow>
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow),
+QT_BEGIN_NAMESPACE
+namespace Ui {class MainWindow;}
+QT_END_NAMESPACE
+
+class MainWindow : public QMainWindow
 {
-    ui->setupUi(this);
-    timer = new QTimer(this)
-    timer->setInterval(100);
-    connect(timer, SIGNAL(timeout()), this, SLOT(TimerTick()));
-}
-
-MainWindow:~MainWindown()
-{
-    delete ui;
-}
-
-void MainWindow::SetupGame()
-{
-    srand(time(NULL));
-    QList<QString>* animalEmoji =
-            new QList<QString>(std::initializer_list<QString>
-                               {
-                                   "🐱‍👤", "🐱‍👤",
-                                   "🐒","🐒",
-                                   "🦥","🦥",
-                                   "🐘","🐘",
-                                   "🦔","🦔",
-                                   "🐍","🐍",
-                                   "🦀","🦀",
-                                   "🦞","🦞",
-                               });
-}
+    Q_OBJECT
+    
+public:
+    MainWindow(QWidget *parent = nullptr);
+    ~MainWindow();
+    void SetupGame();
+    
+private slots:
+    void TimeClick();
+    void ButtonClicked();
+    
+private:
+    Ui::MainWindow *ui;
+    int matchesFound;
+    int tenthsOfSecondElapsed;
+};
